@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const autorPost = document.querySelector('.autor-post')
     const sendPost = document.querySelector('.send-post')
     const divConteudos = document.querySelector('.conteudos')
+    
 
     const postsRef = databaseRef(database, `posts`)
 
@@ -61,25 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    const listarPosts = (conteudos) =>{
-        onValue(postsRef,(snapshot)=>{
+    const listarPosts = (conteudos) => {
+        onValue(postsRef, (snapshot) => {
             const posts = snapshot.val()
-            divConteudos.innerHTML = ''
-            if(posts){
-                const postsIds = Object.keys(posts)
-                postsIds.forEach((postId) =>{
+            if(divConteudos){
+              divConteudos.innerHTML = ''  
+            }
+            
+            if (posts){
+                
+                const postsIds = Object.keys(posts).sort((a,b)=>b-a)
+                postsIds.forEach((postId) => {
                     const post = posts[postId]
                     const postElement = document.createElement('div')
                     postElement.innerHTML = `
                         <h2 class="mt-5 fw-bold text-center text-success" >${post.titulo}</h2>
                         <div class="decoration-bar" ></div>
-
+                        <img src="${post.imagemUrl}" alt="imagem de ${post.titulo}" class="img-blog my-5 img-fluid" />
+                        <p>${post.mensagem}</p>
+                        <p class="align-self-center mt-5" >Publicado em:${post.data} por ${post.autor}.</p>
+                        <hr/>
                     `
-                    divConteudos.appendChild(postElement)
+                    if(divConteudos){
+                      divConteudos.appendChild(postElement)  
+                    }
+                    
                 })
-            }else{
-                divConteudos.innerHTML='<p class="mt-5" >Nenhum post encontrado.</p>'
+            } else {
+                if(divConteudos){
+                    divConteudos.innerHTML = '<p class="mt-5" >Nenhum post encontrado.</p>'
+                }
                 
+
             }
         })
     }

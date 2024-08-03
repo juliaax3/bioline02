@@ -62,13 +62,13 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Endemicos
+              Espécies
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Norte</a></li>
-              <li><a class="dropdown-item" href="#">Nordeste</a></li>
-              <li><a class="dropdown-item" href="#">Sul</a></li>
-              <li><a class="dropdown-item" href="#">Suldeste</a></li>
+              <li><a class="dropdown-item" href="#">Aéreos</a></li>
+              <li><a class="dropdown-item" href="#">Aquáticos</a></li>
+              <li><a class="dropdown-item" href="#">Domésticos</a></li>
+              <li><a class="dropdown-item" href="#">Selvagens</a></li>
             </ul>
           </li>
           <li class="nav-item link-admin">
@@ -90,7 +90,7 @@
     <h2 class="text-center text-success titulo-login">ACESSO AO ADMINISTRADOR DO SISTEMA</h2>
     <div class="decoration-bar mb-5"></div>
     <div class="mensagens w-100 text-center mb-4"></div>
-    <form class="form-login">
+    <form class="form-login">      
       <input type="text" class="email-admin form-control" placeholder="Informe o seu e-mail...">
       <input type="password" class="senha-admin form-control my-4" placeholder="Informe a sua senha...">
       <button class="form-control btn-entrar btn btn-success mt-2">Entrar</button>
@@ -98,15 +98,21 @@
     </form>
   </div>
 
-  <div class="form-post container ">
+  <div class="form-post container">
     <!-- titulo, imagem, conteudo, data e autor -->
-    <input type="text" class="form-control my-3 titulo-post" placeholder="Informe o título..." required>
+    <input type="text" class="form-control my-3 titulo-post " placeholder="Informe o título..." required>
     <input type="file" class="form-control mb-3 imagem-post" placeholder="Selecione a imagem..." required>
     <textarea class="form-control mb-3 mensagem-post" rows="20" placeholder="Desenvolva um texto aqui!" required></textarea>
-    <input type="date" class="form-control mb-3 data-post" placeholder="Informe a data..." required>
-    <input type="text" class="form-control mb-3 autor-post" placeholder="Informe o autor..."required>
-    <button class="btn btn-success form-control send-Post">Postar</button>
+    <input type="date" class="form-control mb-3 data-publicacao-post" placeholder="Informe a data..." required>
+    <input type="text" class="form-control mb-3 autor-post" placeholder="Informe o autor..." required>
+    <button class="btn btn-success form-control send-post">Postar</button>
   </div>
+
+  <div class="gerenciador-conteudos container my-5" >
+    <!-- Uma lista com botões para editar e apagar aqui -->
+  </div>
+
+  
 
   <footer class="pt-5 text-center">
     <div class="decoration-bar"></div>
@@ -117,7 +123,7 @@
   <!-- Firebase -->
   <script src="./assets/js/firebase.js" type="module"></script>
   <script src="./assets/js/auth.js" type="module"></script>
-
+  
   <script type="module" src="./assets/js/database.js"></script>
 
   <!-- JQuery -->
