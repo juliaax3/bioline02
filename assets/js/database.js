@@ -97,20 +97,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 postsIds.forEach((postId) => {
                     const post = posts[postId]
                     const postElement = document.createElement('div')
-                    if (categoria === 'geral' || categoria === categoria) {
+                    if (categoria === 'geral' || post.categoria === categoria) {
                         dadosPost(postElement, post)
 
 
                     }
 
                     if (conteudos) {
-                        divConteudos.appendChild(postElement)
+                        conteudos.appendChild(postElement)
                     }
 
                 })
             }else {
                 if (conteudos) {
-                    divConteudos.innerHTML = '<p class="mt-5">Nenhum post encontrado.</p>'
+                    conteudos.innerHTML = '<p class="mt-5">Nenhum post encontrado.</p>'
                 }
 
 

@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BioLine</title>
+  <!-- aosanimate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Descrução -->
   <meta name="description" content="Coloque uma descrição aqui...">
   <!-- Estilo Bootstrap -->
@@ -52,7 +54,7 @@
             <a class="nav-link" href="ongs.html">ONGs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registros.html">Blog</a>
+            <a class="nav-link" href="endemicos.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="denuncias.html">Denuncias</a>
@@ -88,7 +90,7 @@
   </nav>
   <!-- Final da navegação -->
    <div class="container mt-5">
-    <h2 class=" mt-5 fw-bold text-center text-success">ENTRE ME CONTATO COM A NOSSA EQUIPE
+    <h2 class=" mt-5 fw-bold text-center text-success">ENTRE EM CONTATO COM A NOSSA EQUIPE
     </h2>
     <div class="decoration-bar"></div>
      <form class="my-5">
@@ -105,8 +107,6 @@
     <div class="decoration-bar"></div>
   </footer>
 
-
-
   <!-- JQuery -->
   <script src="assets/js/jquery.js"></script>
   <!-- Script  local -->
@@ -116,9 +116,17 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-         <!-- Firebase -->
+  <!-- Firebase -->
   <script src="./assets/js/firebase.js" type="module"></script>
   <script src="./assets/js/auth.js" type="module"></script>
+
+  <!-- scripts AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>
