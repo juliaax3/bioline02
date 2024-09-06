@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const dadosPost = (postElement, post) => {
-    const dataFormatada = new Date(post.Date).toLocaleDateString('pt-BR')
-    postElement.innerHTML = `
-    <h2 class="mt-5 fw-bold text-center text-success" >${post.titulo}</h2>
-    <div class="decoration-bar" ></div>
-    <img src="${post.imagemUrl}" alt="imagem de ${post.titulo}" class="img-blog d-block mx-auto my-5 img-fluid" />
-    <p class="text-center">${post.mensagem.replace(/\n/g, '<br>')}</p>
-    <p class="align-self-center mt-5 text-and" >Publicado em:${dataFormatada} por ${post.autor}.</p>
-    <hr/>
-`
-}
+        const dataFormatada = new Date(post.Date).toLocaleDateString('pt-BR')
+        postElement.innerHTML = `
+        <h2 class="mt-5 fw-bold text-center text-success" >${post.titulo}</h2>
+        <div class="decoration-bar" ></div>
+        <img src="${post.imagemUrl}" alt="imagem de ${post.titulo}" class="img-blog d-block mx-auto my-5 img-fluid" />
+        <p>${post.mensagem.replace(/\n/g, '<br>')}</p>
+        <p class="align-self-center mt-5 text-and" >Publicado em:${dataFormatada} por ${post.autor}.</p>
+        <hr/>
+    `
+    }
 
     const postsRef = databaseRef(database, `posts`)
 
