@@ -24,9 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    const dadosPost = (postElement, post) => {
-    const dataFormatada = new Date(post.Date);
-    console.log(dataFormatada);
-    console.log(dataFormatada.toLocaleDateString('pt-BR'));
+    const dataFormatada = new Date(post.data).toLocaleDateString('pt-BR')
     postElement.innerHTML = `
     <h2 class="mt-5 fw-bold text-center text-success" >${post.titulo}</h2>
     <div class="decoration-bar" ></div>
