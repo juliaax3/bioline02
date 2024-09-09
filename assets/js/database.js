@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="decoration-bar" ></div>
     <img src="${post.imagemUrl}" alt="imagem de ${post.titulo}" class="img-blog d-block mx-auto my-5 img-fluid" />
     <p>${post.mensagem.replace(/\n/g, '<br>')}</p>
-    <p class="align-self-center mt-5 text-and" >Publicado em:''${dataFormatada} por ${post.autor}.</p>
+    <p class="align-self-center mt-5 text-and" >Publicado em: ${dataFormatada} por ${post.autor}.</p>
     <hr/>
 `
 }
