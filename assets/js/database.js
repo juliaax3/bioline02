@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const divConteudos = document.querySelector('.conteudos')
     const gerenciadorConteudos = document.querySelector('.gerenciador-conteudos')
     const postCategoria = document.querySelector('.post-categoria')
-    const norte = document.querySelector('.norte')
-    const nordeste = document.querySelector('.nordeste')
-    const centroOeste = document.querySelector('.centro-oeste')
-    const sudeste = document.querySelector('.sudeste')
-    const sul = document.querySelector('.sul')
+    const amazonia = document.querySelector('.amazonia')
+    const mataAtlantica = document.querySelector('.mataAtlantica')
+    const caatinga = document.querySelector('.caatingae')
+    const cerrado = document.querySelector('.cerrado')
+    const pantanal = document.querySelector('.pantanal')
     
 
 
@@ -165,20 +165,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (divConteudos) {
         listarPosts(divConteudos, 'geral')
     }
-    if(norte){
-        listarPosts(norte, 'norte')
+    if(amazonia){
+        listarPosts(amazonia, 'amazonia')
     }
-    if(nordeste){
-        listarPosts(nordeste, 'nordeste')
+    if(mataAtlantica){
+        listarPosts(mataAtlantica, 'mataAtlantica')
     }
-    if(centroOeste){
-        listarPosts(centroOeste, 'centro-oeste')
+    if(caatinga){
+        listarPosts(caatinga, 'caatinga')
     }
-    if(sudeste){
-        listarPosts(sudeste, 'sudeste')
+    if(cerrado){
+        listarPosts(cerrado, 'cerrado')
     }
-    if(sul){
-        listarPosts(sul, 'sul')
+    if(pantanal){
+        listarPosts(pantanal, 'pantanal')
     }
     if (gerenciadorConteudos){
         gerenciarPosts(gerenciadorConteudos)
