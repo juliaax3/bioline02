@@ -94,3 +94,10 @@ form textarea{
 .mensagens{
     height: 32px;
 }
+
+/* aleatorios */
+
+a{
+    text-decoration: none;
+    color: #1e2022;
+}
