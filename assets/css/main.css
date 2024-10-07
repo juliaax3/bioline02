@@ -52,10 +52,10 @@ body{
 .card{
     transition: transform .5s;
 }
-.card:hover{
+.card:hover, .acard:hover{
     transform: scale(1.1);
     z-index: 1;
-    background-color: black;
+    background-color: rgb(49, 49, 49);
     color: white;
 }
 .selva{
@@ -97,7 +97,8 @@ form textarea{
 
 /* aleatorios */
 
-a{
+.acard{
     text-decoration: none;
-    color: #1e2022;
+    color: black;
+    text-align: justify;
 }
