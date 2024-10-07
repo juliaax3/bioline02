@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const postCategoria = document.querySelector('.post-categoria')
     const amazonia = document.querySelector('.amazonia')
     const mataAtlantica = document.querySelector('.mataAtlantica')
-    const caatinga = document.querySelector('.caatingae')
+    const caatinga = document.querySelector('.caatinga')
     const cerrado = document.querySelector('.cerrado')
     const pantanal = document.querySelector('.pantanal')
     
@@ -187,3 +187,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
+
